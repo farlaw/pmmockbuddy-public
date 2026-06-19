@@ -62,3 +62,9 @@ This project helped me think more deeply about:
 - Designing for repeated user practice
 - Fast prototyping with AI coding tools
 - How AI can augment, but not fully replace, human feedback
+
+- ## Screenshots
+
+![PM Mock Buddy practice flow](screenshots/pm-mock-buddy-practice.png)
+
+![PM Mock Buddy feedback](screenshots/pm-mock-buddy-feedback.png)
