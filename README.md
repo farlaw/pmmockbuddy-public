@@ -1,70 +1,81 @@
 # PM Mock Buddy
 
-PM Mock Buddy is an AI-assisted product management interview practice tool.
+An AI mock-interview coach for product managers.
 
-It helps PM candidates practice product sense, execution, metrics, strategy, and behavioral interview questions with structured feedback and iteration.
+Practice product sense, execution, metrics, strategy, and behavioral interviews with a follow-up and structured written feedback — not a blank ChatGPT tab.
 
-## Why I built it
+**Web:** [pmmockbuddy.com](https://pmmockbuddy.com)  
+**iOS:** [App Store](https://apps.apple.com/app/id6756758029)  
+**Portfolio:** [kirillpm.com](https://kirillpm.com)
 
-I built PM Mock Buddy while preparing for product management interviews myself. I wanted a tool that could help simulate realistic PM interview practice, give structured feedback, and help me improve faster between peer mocks and real interviews.
+This public repository is a product case study. The production source stays private.
 
-The product came from a very concrete pain point: PM interview prep is high-context, repetitive, and hard to evaluate objectively. A good mock interviewer gives feedback on structure, clarity, tradeoffs, metrics, and storytelling. I wanted to explore how AI could help replicate parts of that coaching loop.
+I designed and shipped PM Mock Buddy as a working product, using Lovable as an AI development collaborator.
+
+---
+
+## The problem
+
+PM interview prep is high-context and hard to evaluate alone. Peer mocks are useful and scarce. Generic AI chat will happily produce a “perfect” answer without behaving like an interviewer: one question at a time, a real follow-up, time pressure, and critique that is specific enough to change the next rep.
+
+I built PM Mock Buddy to sit between those two: more realistic than a prompt, more available than a friend who can run FAANG-style loops after work.
+
+---
 
 ## What it does
 
-- Generates realistic PM interview prompts
-- Supports product sense, execution, metrics, strategy, and behavioral practice
-- Helps structure answers using PM interview frameworks
-- Gives feedback on clarity, structure, assumptions, tradeoffs, and depth
-- Helps candidates iterate on weaker answers
-- Supports faster repetition between live mock interviews
+1. Pick a **level**, **interviewer persona** (FAANG / startup / retail), **question types**, and **language**.
+2. Answer by **voice** or **text**. Voice is transcribed; the answer stays editable.
+3. Take **one follow-up** on the same question, the way a real interviewer would.
+4. After the set, get a **structured feedback report** — per-question critique, not a single vague score.
+5. Come back and run another loop.
 
-## Product focus
+Languages: English, Russian, Spanish, French.
 
-The core product question was:
+---
 
-> How can AI help PM candidates get more high-quality practice and feedback between live mock interviews?
+## Product decisions
 
-Key product areas included:
+**Be an interviewer, not an answer key.** The loop is question → answer → follow-up → feedback. The product should not dump a model essay and call it practice.
 
-- Interview prompt generation
-- Answer structure and evaluation
-- Feedback quality
-- Behavioral story refinement
-- Practice history and iteration loops
-- Balancing coaching with not over-prescribing the “perfect” answer
+**Voice had to work on a phone.** A PM mock that only types is a different product. Recording, transcription, and an always-editable transcript were treated as the experience, not a demo checkbox.
 
-## Why this matters
+**Feedback has to be usable.** The output is a written report you can reread, not a conversational pep talk that disappears.
 
-PM interview preparation is often uneven. Candidates may practice a lot but still struggle to understand whether their answers are clear, structured, and persuasive.
+**Ship it where candidates already practice.** Same product on the web and iOS, with a limited free allowance and Pro on the App Store.
 
-PM Mock Buddy explores how AI can act as a lightweight practice partner: not replacing real human mock interviews, but helping users get more reps, identify patterns, and improve faster.
+**AI is the interviewer and the coach — inside a fixed workflow.** Question selection, follow-ups, and feedback are model-assisted. The session structure, limits, and history are product rules.
 
-## Tech / implementation notes
+---
 
-The private working repo includes the actual implementation. This public repo is a sanitized portfolio version without secrets, API keys, tokens, user data, private transcripts, or personal job-search notes.
+## What this is not
 
-Core components:
+Not a replacement for a strong human mock. Not a claim that the model “grades like Google.” Not an autonomous agent platform.
 
-- AI-assisted prompt and feedback generation
-- Structured PM interview categories
-- Answer evaluation and coaching logic
-- Lightweight product workflow for repeated practice
-- Iteration loops based on user feedback
+It is a practice partner for getting more high-quality reps between live interviews.
 
-## What I learned
+---
 
-This project helped me think more deeply about:
+## How it was built
 
-- AI coaching experiences
-- Evaluation quality and feedback calibration
-- Productizing high-context knowledge work
-- Designing for repeated user practice
-- Fast prototyping with AI coding tools
-- How AI can augment, but not fully replace, human feedback
+I designed the interview loop, the personas, the voice path, and what “good feedback” had to contain, then built and shipped the web and iOS product with Lovable as an AI coding collaborator.
 
-- ## Screenshots
+---
 
-![PM Mock Buddy practice flow](screenshots/pm-mock-buddy-practice.png)
+## Screenshots
 
-![PM Mock Buddy feedback](screenshots/pm-mock-buddy-feedback.png)
+To add after a sanitization pass (no real emails, account names, or private transcripts):
+
+1. Setup — level, persona, question types.
+2. In-interview — question + voice/text answer.
+3. Feedback report — structured critique after the session.
+
+Existing App Store captures in this repo should be recaptioned or replaced; do not ship broken image links.
+
+---
+
+## Links
+
+- Web: [pmmockbuddy.com](https://pmmockbuddy.com)
+- App Store: [PM Mock Buddy](https://apps.apple.com/app/id6756758029)
+- Portfolio: [kirillpm.com](https://kirillpm.com)
